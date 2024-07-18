@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
     ..setJavaScriptMode(JavaScriptMode.unrestricted);
 
   HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +21,17 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {
+              controller.loadRequest(Uri.parse(
+                  'https://snoopy-thon.tistory.com/category/Flutter'));
+            },
+            icon: const Icon(
+              Icons.home,
+            ),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,
