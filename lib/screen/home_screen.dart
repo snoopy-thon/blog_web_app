@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+final homeUrl = Uri.parse('https://snoopy-thon.tistory.com/category/Flutter');
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  WebViewController controller = WebViewController()
+    ..loadRequest(homeUrl)
+    ..setJavaScriptMode(JavaScriptMode.unrestricted);
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +22,9 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+      ),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }
