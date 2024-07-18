@@ -21,6 +21,10 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        leading: IconButton(
+          onPressed: onGoBack,
+          icon: const Icon(Icons.arrow_back_ios_new),
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -37,5 +41,11 @@ class HomeScreen extends StatelessWidget {
         controller: controller,
       ),
     );
+  }
+
+  Future<void> onGoBack() async {
+    if (await controller.canGoBack()) {
+      controller.goBack();
+    }
   }
 }
