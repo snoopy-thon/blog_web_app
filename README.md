@@ -1,16 +1,23 @@
-# blog_web_app
+# Project. 블로그 웹앱
 
-A new Flutter project.
+## 프로젝트명
+- blog_web_app
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## 개발환경
+- flutter SDK: 3.22.2
 
-A few resources to get you started if this is your first Flutter project:
+## 기능
+- 웹뷰를 사용해서 앱에서 웹사이트 실행하기
+- 홈버튼 누르면 홈으로 가기
+- 뒤로가기 버튼 누르면 뒤로가기
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 핵심 구성요소
+- StatelessWidget
+- Appbar
+- Webview
+- IconButton
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 플러그인
+- webview_flutter: 4.8.0
+  
